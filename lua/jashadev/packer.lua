@@ -38,4 +38,5 @@ return require('packer').startup(function(use)
   use 'akinsho/nvim-bufferline.lua'
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
+  use "almo7aya/openingh.nvim"
 end)
