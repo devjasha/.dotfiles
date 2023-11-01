@@ -16,7 +16,7 @@ vim.keymap.set('n', 'ss', ':split<Return><C-w>w')
 vim.keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
 
 -- Move window
-vim.keymap.set('n', '<Space>', '<C-w>w')
+vim.keymap.set('n', '<C-e>', '<C-w>w')
 
 -- Delete a word backwards
 vim.keymap.set('n', 'dw', 'vb"_d')
