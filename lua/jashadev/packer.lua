@@ -15,7 +15,6 @@ return require('packer').startup(function(use)
   use "rebelot/kanagawa.nvim"
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use 'nvim-lua/plenary.nvim'
-  use 'ThePrimeagen/harpoon'
   use {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v3.x',
