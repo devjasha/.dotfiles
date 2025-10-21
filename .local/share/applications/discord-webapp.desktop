@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Discord
+Comment=Discord Web App
+Exec=chromium --app=https://discord.com/app --class=Discord
+Icon=discord
+Terminal=false
+Type=Application
+Categories=Network;Chat;

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=GitHub
+Comment=GitHub Web App
+Exec=chromium --app=https://github.com --class=GitHub
+Icon=github
+Terminal=false
+Type=Application
+Categories=Network;Development;

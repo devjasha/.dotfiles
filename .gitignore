@@ -1,0 +1,16 @@
+# Ignore backup files
+*.backup
+
+# Ignore logs
+*.log
+
+# Ignore hyprpaper cache
+.config/hypr/hyprpaper.conf
+
+# Ignore waybar local config if any
+.config/waybar/.config/
+
+# Ignore any sensitive files
+*secret*
+*password*
+*.key

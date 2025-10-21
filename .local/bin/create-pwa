@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# Script to create a new PWA launcher
+# Usage: create-pwa <name> <url> [icon] [categories]
+
+if [ $# -lt 2 ]; then
+    echo "Usage: create-pwa <name> <url> [icon] [categories]"
+    echo "Example: create-pwa 'Netflix' 'https://netflix.com' 'netflix' 'Network;AudioVideo'"
+    exit 1
+fi
+
+NAME="$1"
+URL="$2"
+ICON="${3:-applications-internet}"
+CATEGORIES="${4:-Network;}"
+
+# Create sanitized filename
+FILENAME=$(echo "$NAME" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
+DESKTOP_FILE="$HOME/.local/share/applications/${FILENAME}-webapp.desktop"
+
+# Create desktop entry
+cat > "$DESKTOP_FILE" << EOF
+[Desktop Entry]
+Version=1.0
+Name=$NAME
+Comment=$NAME Web App
+Exec=chromium --app=$URL --class=$NAME
+Icon=$ICON
+Terminal=false
+Type=Application
+Categories=$CATEGORIES
+EOF
+
+chmod +x "$DESKTOP_FILE"
+
+echo "Created PWA launcher: $DESKTOP_FILE"
+echo "The app should now appear in your launcher!"
