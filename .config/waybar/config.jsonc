@@ -7,6 +7,8 @@
   "modules-left": ["clock", "hyprland/workspaces"],
   "modules-center": ["custom/update", "custom/screenrecording-indicator"],
   "modules-right": [
+    "pulseaudio",
+    "bluetooth",
     "group/tray-expander",
     "battery"
   ],
@@ -101,8 +103,9 @@
   "pulseaudio": {
     "format": "{icon}",
     "on-click": "$TERMINAL --class=Wiremix -e wiremix",
+    "on-click-middle": "~/.config/waybar/audio-output-switcher.sh",
     "on-click-right": "pamixer -t",
-    "tooltip-format": "Playing at {volume}%",
+    "tooltip-format": "Playing at {volume}%\nMiddle-click to switch output",
     "scroll-step": 5,
     "format-muted": "",
     "format-icons": {
